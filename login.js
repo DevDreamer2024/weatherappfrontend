@@ -9,7 +9,7 @@ document.querySelector("#register").addEventListener("click", () => {
   const email = document.querySelector("#registerEmail").value;
 //au click sur register on attribue les valeurs des champs a des variables
 
-    fetch("https://wheatherapp4-backend.vercel.app/users/signup", {
+    fetch("https://weatherappbackend-six.vercel.app/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ document.querySelector("#connection").addEventListener("click", () => {
     const email = document.querySelector('#connectionEmail').value;
     const password = document.querySelector('#connectionPassword').value;
 //au click sur connection on attribue les valeurs des champs a des variables
-        fetch ("https://wheatherapp4-backend.vercel.app/users/signin", {
+        fetch ("https://weatherappbackend-six.vercel.app/users/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
