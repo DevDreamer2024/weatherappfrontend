@@ -11,7 +11,7 @@ document.querySelector("#register").addEventListener("click", () => {
   };
 //au click sur register on attribue les valeurs des champs a des variables
 
-    fetch("https://weatherappbackend-pi.vercel.app/users/signup", {
+    fetch("https://weatherappbackend-dusky.vercel.app/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ document.querySelector("#connection").addEventListener("click", () => {
     password: document.querySelector("#connectionPassword").value,
   };
 //au click sur connection on attribue les valeurs des champs a des variables
-        fetch ("https://weatherappbackend-pi.vercel.app/users/signin", {
+        fetch ("https://weatherappbackend-dusky.vercel.app/users/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

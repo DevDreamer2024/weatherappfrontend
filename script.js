@@ -1,4 +1,4 @@
-fetch('https://weatherappbackend-pi.vercel.app/weather')
+fetch('https://weatherappbackend-dusky.vercel.app/weather')
 	.then(response => response.json())
 	.then(data => {
 		if (data.weather) {
@@ -24,7 +24,7 @@ fetch('https://weatherappbackend-pi.vercel.app/weather')
 function updateDeleteCityEventListener() {
 	for (let i = 0; i < document.querySelectorAll('.deleteCity').length; i++) {
 		document.querySelectorAll('.deleteCity')[i].addEventListener('click', function () {
-			fetch(`https://weatherappbackend-pi.vercel.app/weather/${this.id}`, { method: 'DELETE' })
+			fetch(`https://weatherappbackend-dusky.vercel.app/weather/${this.id}`, { method: 'DELETE' })
 				.then(response => response.json())
 				.then(data => {
 					if (data.result) {
@@ -38,7 +38,7 @@ function updateDeleteCityEventListener() {
 document.querySelector('#addCity').addEventListener('click', function () {
 	const cityName = document.querySelector('#cityNameInput').value;
 
-	fetch('https://weatherappbackend-pi.vercel.app/weather', {
+	fetch('https://weatherappbackend-dusky.vercel.app/weather', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ cityName }),
