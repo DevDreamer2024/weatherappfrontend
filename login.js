@@ -21,12 +21,8 @@ document.querySelector("#register").addEventListener("click", () => {
     .then(data => {
         //le.then permet d'attendre et recuperer la reponse de la requete
         //a la reponse on affiche un message d'erreur si l'utilisateur existe deja
-        console.log(data);
-        if (data.result === false) {
-        alert(data.error);
-        }
-        else {
-      alert("User created successfully");
+        
+        if (data.result) {
       window.location.assign("index.html");
     }
     });
@@ -47,15 +43,11 @@ document.querySelector("#connection").addEventListener("click", () => {
             body: JSON.stringify(user),
         }).then(response => response.json()).then(data => {
             console.log(data); //le.then permet d'attendre et recuperer la reponse de la requete si la reponse est false (ce que l'on a indiqué dans la route signin) on affiche un message d'erreur
-            if (data.result === false) {
-                alert(data.error);
-            } else {
-                alert("User connected successfully");
-                window.location.assign("index.html");
+            if (data.result) {
+              window.location.assign("index.html");
             }
-        });
-    }
-);
+            });
+          });
 
 //on traite ici la partie pour se deconnecter
 //lorem ipsum
